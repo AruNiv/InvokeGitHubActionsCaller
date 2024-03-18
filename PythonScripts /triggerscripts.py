@@ -2,14 +2,14 @@ import os
 import requests
 import sys
 
-TOKEN= str(sys.argv[1])
-OWNER= str(sys.argv[2])
-REPO= str(sys.argv[3])
-Workflow_Name= str(sys.argv[4])
-parameter1= str(sys.argv[5])
-parameter2 = str(sys.argv[6])
+TOKEN=str(sys.argv[1])
+OWNER=str(sys.argv[2])
+REPO=str(sys.argv[3])
+Workflow_Name=str(sys.argv[4])
+parameter1=str(sys.argv[5])
+parameter2=str(sys.argv[6])
 
-print( "the toke value is")
+print( "the token value is")
 def trigger_workflow(Workflow_Name,parameter1,parameter2):
 
       headers = {
