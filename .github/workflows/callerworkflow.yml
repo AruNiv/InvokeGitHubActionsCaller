@@ -39,11 +39,11 @@ jobs:
          
       - name: Install dependencies
         run: |
-           cd "InvokeGitHubActionsCalled/PythonScripts/"
+           cd "$GITHUB_WORKSPACE/PythonScripts/"
            python -m pip install --upgrade pip
            pip install -r requirements.txt
           
       - name: Trigger the Workflow
         run: |
-         cd "InvokeGitHubActionsCalled/PythonScripts/"
-         python InvokeGitHubActionsCalled/PythonScripts/triggerscripts.py ${{ env.pat_token }}  ${{ github.event.inputs.CalledWorkflow_github_account}}  ${{ github.event.inputs.CalledWorkflow_repo_github}} ${{ github.event.inputs.calledworkflow_name}} ${{ env.parameter1 }} ${{ env.parameter2 }}
+         cd "$GITHUB_WORKSPACE/PythonScripts/"
+         python $GITHUB_WORKSPACE/PythonScripts/triggerscripts.py ${{ env.pat_token }}  ${{ github.event.inputs.CalledWorkflow_github_account}}  ${{ github.event.inputs.CalledWorkflow_repo_github}} ${{ github.event.inputs.calledworkflow_name}} ${{ env.parameter1 }} ${{ env.parameter2 }}
