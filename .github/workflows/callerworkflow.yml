@@ -39,11 +39,11 @@ jobs:
          
       - name: Install dependencies
         run: |
-           cd "/home/runner/work/InvokeGitHubActionsCaller/PythonScripts"
+           cd "AruNiv/InvokeGitHubActionsCaller/PythonScripts"
            python -m pip install --upgrade pip
            pip install -r requirements.txt
           
       - name: Trigger the Workflow
         run: |
-         cd "/home/runner/work/InvokeGitHubActionsCaller/PythonScripts"
-         python /home/runner/work/InvokeGitHubActionsCaller/PythonScripts/triggerscripts.py ${{ env.pat_token }}  ${{ github.event.inputs.CalledWorkflow_github_account}}  ${{ github.event.inputs.CalledWorkflow_repo_github}} ${{ github.event.inputs.calledworkflow_name}} ${{ env.parameter1 }} ${{ env.parameter2 }}
+         cd "AruNiv/InvokeGitHubActionsCaller/PythonScripts"
+         python AruNiv/InvokeGitHubActionsCaller/PythonScripts/triggerscripts.py ${{ env.pat_token }}  ${{ github.event.inputs.CalledWorkflow_github_account}}  ${{ github.event.inputs.CalledWorkflow_repo_github}} ${{ github.event.inputs.calledworkflow_name}} ${{ env.parameter1 }} ${{ env.parameter2 }}
