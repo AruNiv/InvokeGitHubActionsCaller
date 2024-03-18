@@ -39,6 +39,7 @@ jobs:
          
       - name: Install dependencies
         run: |
+          echo "$GITHUB_WORKSPACE"
            cd "AruNiv/InvokeGitHubActionsCaller/PythonScripts"
            python -m pip install --upgrade pip
            pip install -r requirements.txt
