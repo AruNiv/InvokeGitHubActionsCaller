@@ -24,7 +24,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env: 
-      pat_token: ${{ secrets.PAT_TOKEN_GITHUB }}
+      pat_token: ${{ secrets.MYTOKEN }}
       parameter1: 'Feat'
       parameter2: 'V3.0.0'
 
